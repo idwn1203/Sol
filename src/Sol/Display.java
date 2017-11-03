@@ -12,7 +12,8 @@ public class Display {
 		System.out.println("---------------------------");
 		System.out.println("1.Display Schedule List");						
 		System.out.println("2.ADD Schedule");
-		System.out.println("3.Exit");
+		System.out.println("3.Start Study");
+		System.out.println("4.Exit");
 		System.out.println("---------------------------");
 		System.out.println("What do you want to do?");
 		System.out.println("---------------------------");
