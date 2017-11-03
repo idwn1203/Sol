@@ -2,10 +2,8 @@ package Sol;
 import java.util.Scanner;
 
 
-public class Subject {
+public class Subject extends Test {
 	String name;
-	int TM;//TestMonth;
-	int TD;//TestDay;
 	int TRS;
 	int TRE;
 	int MS;//Middle Score

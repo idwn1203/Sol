@@ -20,6 +20,7 @@ public class Display {
 	}
 	
 	public void DPSL(String A,int a,int a1,int a2,int a3) {
+		
 		System.out.println("---------------------------");				
 		System.out.println("과목 : "+"시험범위는"+a+"부터"+a1+"까지이고 시험일자는"+a2+" 월"+a3+" 일입니다.");
 		System.out.println("---------------------------");
