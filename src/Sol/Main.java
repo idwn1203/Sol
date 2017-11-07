@@ -2,8 +2,9 @@ package Sol;
 
 import java.util.Calendar;
 import java.util.Scanner;
+import javafx.application.Application;
 
-public class Main {
+public class Main extends Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,11 +14,6 @@ public class Main {
 		Study study =new Study();
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal  = Calendar.getInstance();
-
-
-		
-		
-
 
 		while (true) {
 			System.out.println(cal.get(Calendar.YEAR)+"³â"+(cal.get(Calendar.MONTH)+1)+"¿ù"+cal.get(Calendar.DAY_OF_MONTH)+"ÀÏ");
@@ -39,6 +35,7 @@ public class Main {
 				subject.setData();
 				break;
 			case 3:
+				study.setTime(cal.get(Calendar.HOUR),cal.get(Calendar.MINUTE));
 				
 				break;
 			}
