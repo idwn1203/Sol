@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="verify.exam05.RootController">
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
+			<children>
+            <Button fx:id="btnAdd2" text="홈" />
+				<Button fx:id="btnAdd" text="시작" />
+            <Button fx:id="btnAdd1" layoutX="141.0" layoutY="24.0" text="휴식" />
+            <Button fx:id="btnAdd11" layoutX="171.0" layoutY="24.0" text="완료" />
+			</children>
+		</HBox>
+	</bottom>
+   <center>
+		<TableView fx:id="tableView" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="79.0" resizable="false" text="과목" />
+				<TableColumn prefWidth="122.0" resizable="false" text="목표" />
+				<TableColumn prefWidth="99.0" resizable="false" text="현재(%)" />
+			</columns>
+		</TableView>
+   </center>
+</BorderPane>

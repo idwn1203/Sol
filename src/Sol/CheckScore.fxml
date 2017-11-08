@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="verify.exam05.RootController">
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
+			<children>
+            <Button fx:id="btnAdd2" text="추가" />
+            <Button fx:id="btnAdd11" layoutX="171.0" layoutY="24.0" text="전체평점" />
+            <Button fx:id="btnAdd21" layoutX="180.0" layoutY="24.0" text="취득학점" />
+            <Button fx:id="btnAdd111" layoutX="210.0" layoutY="24.0" text="완료" />
+			</children>
+		</HBox>
+	</bottom>
+   <center>
+		<TableView fx:id="tableView" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="52.0" resizable="false" text="과목" />
+            <TableColumn prefWidth="54.0" resizable="false" text="학점" />
+				<TableColumn prefWidth="54.0" resizable="false" text="성적" />
+				<TableColumn prefWidth="69.0" resizable="false" text="취득학점" />
+            <TableColumn prefWidth="104.0" resizable="false" text="학기">
+               <columns>
+                  <TableColumn prefWidth="104.0" resizable="false" text="년도" />
+                  <TableColumn prefWidth="104.0" resizable="false" text="학기" />
+               </columns>
+            </TableColumn>
+			</columns>
+		</TableView>
+   </center>
+</BorderPane>
