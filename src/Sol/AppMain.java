@@ -1,4 +1,5 @@
 package Sol;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,12 +13,13 @@ public class AppMain extends Application {
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("Sol");
 		primaryStage.setScene(scene);
-		primaryStage.setResizable(false);		
+		primaryStage.setResizable(false);
 		primaryStage.show();
+
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}
-}
 
+}
