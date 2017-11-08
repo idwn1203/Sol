@@ -9,7 +9,13 @@ import javafx.stage.Stage;
 public class AppMain extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		// Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+		Parent root = loader.load();
+		RootController controller = loader.getController();
+		controller.setPrimaryStage(primaryStage);
+
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("Sol");
 		primaryStage.setScene(scene);

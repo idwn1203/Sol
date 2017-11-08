@@ -4,22 +4,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="verify.exam05.RootController">
-	<center>
-		<TableView fx:id="tableView">
-			<columns>
-				<TableColumn prefWidth="100" resizable="false" text="과목" />
-				<TableColumn prefWidth="100" resizable="false" text="시험범위" />
-				<TableColumn prefWidth="100" resizable="false" text="시험날짜" />
-			</columns>
-		</TableView>
-	</center>
-	<bottom>
-		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
-			<children>
-            <Button fx:id="btnAdd1" layoutX="141.0" layoutY="24.0" text="홈" />
-				<Button fx:id="btnAdd" text="추가" />
-			</children>
-		</HBox>
-	</bottom>
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.RootController">
+	<children>
+		<center>
+			<TableView fx:id="tableView">
+				<columns>
+					<TableColumn prefWidth="100" resizable="false" text="과목" />
+					<TableColumn prefWidth="100" resizable="false" text="시험범위" />
+					<TableColumn prefWidth="100" resizable="false" text="시험날짜" />
+				</columns>
+			</TableView>
+		</center>
+		<bottom>
+			<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
+				<children>
+					<Button fx:id="btnAdd1" layoutX="141.0" layoutY="24.0" text="홈" />
+					<Button fx:id="btnAdd" text="추가" />
+	     	    	
+				</children>
+			</HBox>
+		</bottom>
+	</children>
 </BorderPane>
