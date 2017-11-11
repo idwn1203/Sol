@@ -34,29 +34,51 @@ public class RootController implements Initializable {
 	private Button CheckTest;
 	@FXML
 	private Button CheckScore;
+	@FXML
+	private TableView<Subject> tableView;
 
-	
+	//private Stage primaryStage;
+	private ObservableList<Subject> list;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		CheckTime.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				handleCheckTimeAction(event);
-			}
-		});
-		CheckTest.setOnAction(event->handleCheckTestAction(event));
-		CheckScore.setOnAction(event->handleCheckScoreAction(event));
-		
 
+		//tableView.setItems(list);
+		CheckTime.setOnAction(event -> handleCheckTimeAction(event));
+		CheckTest.setOnAction(event -> handleCheckTestAction(event));
+		CheckScore.setOnAction(event -> handleCheckScoreAction(event));
 	}
-	public void handleCheckTimeAction(ActionEvent event) { 
-		System.out.println("창띄우자 클릭"); 
+
+	public void setPrimaryStage(Stage primaryStage) {
+		//this.primaryStage = primaryStage;
 	}
-	public void handleCheckTestAction(ActionEvent event) { 
-		System.out.println("시험일정클릭"); 
+
+	public void handleCheckTimeAction(ActionEvent event){
+		System.out.println("창띄우자 클릭");
+		try {
+			Stage dialog = new Stage(StageStyle.UTILITY);
+			dialog.initModality(Modality.WINDOW_MODAL);
+			dialog.initOwner(CheckTime.getScene().getWindow());
+			dialog.setTitle("확인");
+			Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
+			TableView tableView = (TableView) parent.lookup("#tableViewr");
+			Button btnAdd = (Button) parent.lookup("#btnAdd");
+			dialog.close();
+	
+			Scene scene = new Scene(parent);
+
+			dialog.setScene(scene);
+			dialog.setResizable(false);
+			dialog.show();
+		} catch (IOException e) {}
 	}
-	public void handleCheckScoreAction(ActionEvent event) { 
-		System.out.println("학점확인 클릭"); 
+
+	public void handleCheckTestAction(ActionEvent event) {
+		System.out.println("시험일정클릭");
+	}
+
+	public void handleCheckScoreAction(ActionEvent event) {
+		System.out.println("학점확인 클릭");
 	}
 }
 
