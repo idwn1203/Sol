@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="verify.exam05.RootController">
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
 	<bottom>
 		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
 			<children>
-            <Button fx:id="btnAdd2" text="홈" />
-				<Button fx:id="btnAdd" text="시작" />
-            <Button fx:id="btnAdd1" layoutX="141.0" layoutY="24.0" text="휴식" />
-            <Button fx:id="btnAdd11" layoutX="171.0" layoutY="24.0" text="완료" />
+            <Button  text="홈" />
+				<Button  text="시작" />
+            <Button  layoutX="141.0" layoutY="24.0" text="휴식" />
+            <Button  layoutX="171.0" layoutY="24.0" text="완료" />
 			</children>
 		</HBox>
 	</bottom>

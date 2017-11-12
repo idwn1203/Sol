@@ -38,47 +38,95 @@ public class RootController implements Initializable {
 	private TableView<Subject> tableView;
 
 	//private Stage primaryStage;
-	private ObservableList<Subject> list;
-
+	//private ObservableList<Subject> list;
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		//tableView.setItems(list);
-		CheckTime.setOnAction(event -> handleCheckTimeAction(event));
-		CheckTest.setOnAction(event -> handleCheckTestAction(event));
-		CheckScore.setOnAction(event -> handleCheckScoreAction(event));
+		CheckTime.setOnAction(event -> {
+			try {
+				handleCheckTimeAction(event);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		CheckTest.setOnAction(event -> {
+			try {
+				handleCheckTestAction(event);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		CheckScore.setOnAction(event -> {
+			try {
+				handleCheckScoreAction(event);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 	}
 
 	public void setPrimaryStage(Stage primaryStage) {
 		//this.primaryStage = primaryStage;
 	}
 
-	public void handleCheckTimeAction(ActionEvent event){
-		System.out.println("창띄우자 클릭");
-		try {
+	public void handleCheckTimeAction(ActionEvent event) throws IOException{
 			Stage dialog = new Stage(StageStyle.UTILITY);
 			dialog.initModality(Modality.WINDOW_MODAL);
 			dialog.initOwner(CheckTime.getScene().getWindow());
 			dialog.setTitle("확인");
-			Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
-			TableView tableView = (TableView) parent.lookup("#tableViewr");
-			Button btnAdd = (Button) parent.lookup("#btnAdd");
-			dialog.close();
-	
-			Scene scene = new Scene(parent);
 
+			Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
+			
+			//TableView tableView = (TableView) parent.lookup("#tableViewr");
+			
+			//Button btnAdd = (Button) parent.lookup("#btnAdd");
+			//dialog.close();
+			
+			Scene scene = new Scene(parent);
 			dialog.setScene(scene);
 			dialog.setResizable(false);
 			dialog.show();
-		} catch (IOException e) {}
 	}
 
-	public void handleCheckTestAction(ActionEvent event) {
-		System.out.println("시험일정클릭");
+	public void handleCheckTestAction(ActionEvent event) throws IOException {
+		Stage dialog = new Stage(StageStyle.UTILITY);
+		dialog.initModality(Modality.WINDOW_MODAL);
+		dialog.initOwner(CheckTime.getScene().getWindow());
+		dialog.setTitle("확인");
+
+		Parent parent = FXMLLoader.load(getClass().getResource("CheckTest.fxml"));
+		
+		//TableView tableView = (TableView) parent.lookup("#tableViewr");
+		
+		//Button btnAdd = (Button) parent.lookup("#btnAdd");
+		//dialog.close();
+		
+		Scene scene = new Scene(parent);
+		dialog.setScene(scene);
+		dialog.setResizable(false);
+		dialog.show();
 	}
 
-	public void handleCheckScoreAction(ActionEvent event) {
-		System.out.println("학점확인 클릭");
+	public void handleCheckScoreAction(ActionEvent event)throws IOException {
+		Stage dialog = new Stage(StageStyle.UTILITY);
+		dialog.initModality(Modality.WINDOW_MODAL);
+		dialog.initOwner(CheckTime.getScene().getWindow());
+		dialog.setTitle("확인");
+
+		Parent parent = FXMLLoader.load(getClass().getResource("CheckScore.fxml"));
+		
+		//TableView tableView = (TableView) parent.lookup("#tableViewr");
+		
+		//Button btnAdd = (Button) parent.lookup("#btnAdd");
+		//dialog.close();
+		
+		Scene scene = new Scene(parent);
+		dialog.setScene(scene);
+		dialog.setResizable(false);
+		dialog.show();
 	}
 }
 
