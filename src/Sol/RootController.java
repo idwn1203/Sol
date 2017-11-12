@@ -22,6 +22,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -35,10 +37,13 @@ public class RootController implements Initializable {
 	@FXML
 	private Button CheckScore;
 	@FXML
+	private Button Home;
+	@FXML
 	private TableView<Subject> tableView;
 
 	//private Stage primaryStage;
-	//private ObservableList<Subject> list;
+	private ObservableList<Subject> list;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -66,29 +71,44 @@ public class RootController implements Initializable {
 				e.printStackTrace();
 			}
 		});
+
+		Home.setOnAction(e -> homeAction(e));
+
 	}
 
-	public void setPrimaryStage(Stage primaryStage) {
-		//this.primaryStage = primaryStage;
+	// public void setPrimaryStage(Stage primaryStage) throws IOException{
+	// //this.primaryStage = primaryStage;
+	// }
+	public void homeAction(ActionEvent event) {
+		try {
+			Parent main = FXMLLoader.load(getClass().getResource("StartMain.fxml"));
+			Scene scene =new Scene(main);
+			Stage primaryStage =(Stage)Home.getScene().getWindow();
+			primaryStage.setScene(scene);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	public void handleCheckTimeAction(ActionEvent event) throws IOException{
-			Stage dialog = new Stage(StageStyle.UTILITY);
-			dialog.initModality(Modality.WINDOW_MODAL);
-			dialog.initOwner(CheckTime.getScene().getWindow());
-			dialog.setTitle("확인");
+	public void handleCheckTimeAction(ActionEvent event) throws IOException {
+		System.out.println("test1");
+		Stage dialog = new Stage(StageStyle.UTILITY);
+		dialog.initModality(Modality.WINDOW_MODAL);
+		dialog.initOwner(CheckTime.getScene().getWindow());
+		dialog.setTitle("확인");
 
-			Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
-			
-			//TableView tableView = (TableView) parent.lookup("#tableViewr");
-			
-			//Button btnAdd = (Button) parent.lookup("#btnAdd");
-			//dialog.close();
-			
-			Scene scene = new Scene(parent);
-			dialog.setScene(scene);
-			dialog.setResizable(false);
-			dialog.show();
+		Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
+
+		// TableView tableView = (TableView) parent.lookup("#tableViewr");
+
+		// Button btnAdd = (Button) parent.lookup("#btnAdd");
+		// dialog.close();
+
+		Scene scene = new Scene(parent);
+		dialog.setScene(scene);
+		dialog.setResizable(false);
+		dialog.show();
+
 	}
 
 	public void handleCheckTestAction(ActionEvent event) throws IOException {
@@ -98,49 +118,33 @@ public class RootController implements Initializable {
 		dialog.setTitle("확인");
 
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckTest.fxml"));
-		
-		//TableView tableView = (TableView) parent.lookup("#tableViewr");
-		
-		//Button btnAdd = (Button) parent.lookup("#btnAdd");
-		//dialog.close();
-		
+
+		// TableView tableView = (TableView) parent.lookup("#tableViewr");
+
+		// Button btnAdd = (Button) parent.lookup("#btnAdd");
+		// dialog.close();
+
 		Scene scene = new Scene(parent);
 		dialog.setScene(scene);
 		dialog.setResizable(false);
 		dialog.show();
 	}
 
-	public void handleCheckScoreAction(ActionEvent event)throws IOException {
+	public void handleCheckScoreAction(ActionEvent event) throws IOException {
 		Stage dialog = new Stage(StageStyle.UTILITY);
 		dialog.initModality(Modality.WINDOW_MODAL);
 		dialog.initOwner(CheckTime.getScene().getWindow());
 		dialog.setTitle("확인");
-
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckScore.fxml"));
-		
-		//TableView tableView = (TableView) parent.lookup("#tableViewr");
-		
-		//Button btnAdd = (Button) parent.lookup("#btnAdd");
-		//dialog.close();
-		
+
+		// TableView tableView = (TableView) parent.lookup("#tableViewr");
+
+		// Button btnAdd = (Button) parent.lookup("#btnAdd");
+		// dialog.close();
+
 		Scene scene = new Scene(parent);
 		dialog.setScene(scene);
 		dialog.setResizable(false);
 		dialog.show();
 	}
 }
-
-/*
- * public void handleCheckTime(ActionEvent event) { try { Stage dialog = new
- * Stage(StageStyle.UTILITY); dialog.initModality(Modality.WINDOW_MODAL);
- * dialog.initOwner(CheckTime.getScene().getWindow());
- * dialog.setTitle("CheckTime"); Parent parent =
- * FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
- * 
- * 
- * Button btnClose = (Button) parent.lookup("#btnClose");
- * btnClose.setOnAction(e->dialog.close()); Scene scene = new Scene(parent);
- * dialog.setScene(scene); dialog.show(); }catch(IOException e) {}
- * 
- * }
- */
