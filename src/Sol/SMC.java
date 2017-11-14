@@ -26,8 +26,11 @@ public class SMC implements Initializable {
 	}
 
 	public void HomeAction(ActionEvent event) {
+
+		System.out.println("asdf");
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("Main.fxml"));
+			System.out.println("asdferf");
 			Scene scene =new Scene(main);
 			Stage primaryStage =(Stage)Home.getScene().getWindow();
 			primaryStage.setScene(scene);

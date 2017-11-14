@@ -8,10 +8,9 @@
 	<bottom>
 		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
 			<children>
-            <Button fx:id="btnAdd2" text="추가" />
-            <Button fx:id="btnAdd11" layoutX="171.0" layoutY="24.0" text="전체평점" />
-            <Button fx:id="btnAdd21" layoutX="180.0" layoutY="24.0" text="취득학점" />
-            <Button fx:id="btnAdd111" layoutX="210.0" layoutY="24.0" text="완료" />
+            <Button fx:id="btnAdd" text="추가" />
+            <Button fx:id="btnScore" layoutX="171.0" layoutY="24.0" text="학점확인" />
+            <Button fx:id="Home" layoutX="210.0" layoutY="24.0" text="완료" />
 			</children>
 		</HBox>
 	</bottom>

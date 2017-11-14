@@ -39,6 +39,10 @@ public class RootController implements Initializable {
 	@FXML
 	private Button Home;
 	@FXML
+	private Button Back;
+	@FXML
+	private Button Add;
+	@FXML
 	private TableView<Subject> tableView;
 
 	//private Stage primaryStage;
@@ -73,12 +77,9 @@ public class RootController implements Initializable {
 		});
 
 		Home.setOnAction(e -> homeAction(e));
-
 	}
 
-	// public void setPrimaryStage(Stage primaryStage) throws IOException{
-	// //this.primaryStage = primaryStage;
-	// }
+
 	public void homeAction(ActionEvent event) {
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("StartMain.fxml"));
@@ -96,14 +97,11 @@ public class RootController implements Initializable {
 		dialog.initModality(Modality.WINDOW_MODAL);
 		dialog.initOwner(CheckTime.getScene().getWindow());
 		dialog.setTitle("확인");
-
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
-
-		// TableView tableView = (TableView) parent.lookup("#tableViewr");
-
-		// Button btnAdd = (Button) parent.lookup("#btnAdd");
-		// dialog.close();
-
+		
+		Button Home = (Button) parent.lookup("#Home");
+		Home.setOnAction(e->dialog.close());
+		
 		Scene scene = new Scene(parent);
 		dialog.setScene(scene);
 		dialog.setResizable(false);
@@ -116,18 +114,17 @@ public class RootController implements Initializable {
 		dialog.initModality(Modality.WINDOW_MODAL);
 		dialog.initOwner(CheckTime.getScene().getWindow());
 		dialog.setTitle("확인");
-
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckTest.fxml"));
-
-		// TableView tableView = (TableView) parent.lookup("#tableViewr");
-
-		// Button btnAdd = (Button) parent.lookup("#btnAdd");
-		// dialog.close();
-
 		Scene scene = new Scene(parent);
+		Button Home = (Button) parent.lookup("#Home");
+		Home.setOnAction(e->dialog.close());
+		
+		
 		dialog.setScene(scene);
 		dialog.setResizable(false);
 		dialog.show();
+		
+		
 	}
 
 	public void handleCheckScoreAction(ActionEvent event) throws IOException {
@@ -136,15 +133,17 @@ public class RootController implements Initializable {
 		dialog.initOwner(CheckTime.getScene().getWindow());
 		dialog.setTitle("확인");
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckScore.fxml"));
-
-		// TableView tableView = (TableView) parent.lookup("#tableViewr");
-
-		// Button btnAdd = (Button) parent.lookup("#btnAdd");
-		// dialog.close();
-
+		
+		Button Home = (Button) parent.lookup("#Home");
+		Home.setOnAction(e->dialog.close());
+		
 		Scene scene = new Scene(parent);
 		dialog.setScene(scene);
 		dialog.setResizable(false);
 		dialog.show();
 	}
+	
+	
+	
+	
 }
