@@ -1,5 +1,6 @@
 package Sol;
 
-public class Score {
+public class Score extends Schedule {
+
 
 }

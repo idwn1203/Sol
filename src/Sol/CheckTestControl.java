@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,13 +24,34 @@ import javafx.stage.StageStyle;
 public class CheckTestControl implements Initializable {
 	@FXML
 	private Button Add;
+	@FXML private TableView<Test> tableView;
 	
+	private ObservableList<Test> list;
 	
-
+@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		list = FXCollections.observableArrayList(
+				new Test("°´Ã¼","¿ÖÁÕ",171120)
+		);
 		Add.setOnAction(e -> AddAction(e));
-	}
+	
 
+	TableColumn tc = tableView.getColumns().get(0);
+	tc.setCellValueFactory(new PropertyValueFactory("name"));
+	tc.setStyle("-fx-alignment: CENTER;");
+	
+	tc = tableView.getColumns().get(1);
+	tc.setCellValueFactory(new PropertyValueFactory("range"));
+	tc.setStyle("-fx-alignment: CENTER;");
+	
+	tc = tableView.getColumns().get(2);
+	tc.setCellValueFactory(new PropertyValueFactory("day"));
+	tc.setStyle("-fx-alignment: CENTER;");
+	
+	tableView.setItems(list);
+	
+}
+	
 	public void AddAction(ActionEvent event) {
 		try {
 			Stage dialog = new Stage(StageStyle.UTILITY);
@@ -39,12 +61,18 @@ public class CheckTestControl implements Initializable {
 
 			Parent parent = FXMLLoader.load(getClass().getResource("CTCForm.fxml"));
 			Button btnFormAdd = (Button) parent.lookup("#btnFormAdd");
-			Add.setOnAction(e -> {
+			btnFormAdd.setOnAction(e -> {
 				TextField txtName = (TextField) parent.lookup("#txtName");
-				TextField txtRange = (TextField) parent.lookup("#txtKorean");
-				TextField txtDay = (TextField) parent.lookup("#txtMath");
+				TextField txtRange = (TextField) parent.lookup("#txtRange");
+				TextField txtDay = (TextField) parent.lookup("#txtDay");
+				list.add(new Test(
+						txtName.getText(),
+						txtRange.getText(),
+						Integer.parseInt(txtDay.getText())
+				));
 				dialog.close();
 			});
+		
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
 			btnFormCancel.setOnAction(e->dialog.close());
 			

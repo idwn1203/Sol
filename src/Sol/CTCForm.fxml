@@ -16,8 +16,8 @@
             <Label prefWidth="50" text="시험범위" GridPane.rowIndex="1" />
             <Label prefWidth="50" text="시험날짜" GridPane.rowIndex="2" />
             <TextField id="txtName" prefWidth="100" GridPane.columnIndex="1" />
-            <TextField id="txtKorean" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField id="txtMath" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="txtRange" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="txtDay" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <columnConstraints>
             <ColumnConstraints />

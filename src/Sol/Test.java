@@ -1,11 +1,28 @@
 package Sol;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Test {
+public class Test extends Schedule {
+
 	private SimpleStringProperty range;
+	//private SimpleStringProperty name;
+	//private SimpleIntegerProperty day;
 
-
-
-
+	 public Test(String name,int day) {
+	 super(name,day);
+	 this.range= new SimpleStringProperty();
+	 }
+	
+	 public Test(String name,String range,int day) {
+	 super(name,day);
+	 this.range=new SimpleStringProperty(range);
+	 }
+	
+	public String getRange() {
+		return range.get();
+	}
+	public void setRange(String range) {
+		this.range.set(range);
+	}
 }
