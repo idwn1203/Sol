@@ -20,7 +20,6 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class CheckScoreControl {
-	@FXML private TableView<Subject> tableView;
 	@FXML
 	private Button btnAdd;
 	@FXML
@@ -28,65 +27,23 @@ public class CheckScoreControl {
 	@FXML
 	private Button btnExit;
 
-	
-	private ObservableList<Subject> list;
-	
 	public void initialize(URL location, ResourceBundle resources) {
 
-
-		Home.setOnAction(e -> homeAction(e));
-		Add.setOnAction(e->AddAction(e));
+		btnAdd.setOnAction(e -> btnAddAction(e));
+		btnScore.setOnAction(e -> btnScoreAction(e));
+		btnExit.setOnAction(e -> btnExitAction(e));
 	}
-	
-	public void homeAction(ActionEvent event) {
 
-		TableColumn tc = tableView.getColumns().get(0);
-		tc.setCellValueFactory(new PropertyValueFactory("name"));
-		tc.setStyle("-fx-alignment: CENTER;");
-		
-		tc = tableView.getColumns().get(1);
-		tc.setCellValueFactory(new PropertyValueFactory("range"));
-		tc.setStyle("-fx-alignment: CENTER;");
-		
-		tc = tableView.getColumns().get(2);
-		tc.setCellValueFactory(new PropertyValueFactory("day"));
-		tc.setStyle("-fx-alignment: CENTER;");
-		
-		
-		tableView.setItems(list);
-		//tableView.setOnMouseClicked(event->handleTableViewMouseClicked(event));
-		
+	public void btnAddAction(ActionEvent event) {
+
 	}
-	
-	public void AddAction(ActionEvent event) {
-		try {
-		Stage dialog = new Stage(StageStyle.UTILITY);
-		dialog.initModality(Modality.WINDOW_MODAL);
-		dialog.initOwner(Add.getScene().getWindow());
-		dialog.setTitle("Ãß°¡");
-	
-		Parent parent = FXMLLoader.load(getClass().getResource("CTCForm.fxml"));
-		
-		Button btnFormAdd = (Button) parent.lookup("#btnFormAdd");
-		Add.setOnAction(e->{
-			TextField txtName = (TextField) parent.lookup("#txtName");
-			TextField txtRange = (TextField) parent.lookup("#txtRange");
-			TextField txtDay = (TextField) parent.lookup("#txtDay");
-			list.add(new Subject(
-				txtName.getText(),
-				txtRange.getText(),
-				txtDay.getText()
-			));
-			dialog.close();
-		});
-		Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
-		btnFormCancel.setOnAction(e->dialog.close());
-		
-		Scene scene = new Scene(parent);
-		dialog.setScene(scene);
-		dialog.setResizable(false);	
-		dialog.show();	
-	} catch (IOException e) {}
+
+	public void btnScoreAction(ActionEvent event) {
+
+	}
+
+	public void btnExitAction(ActionEvent event) {
+
 	}
 
 }

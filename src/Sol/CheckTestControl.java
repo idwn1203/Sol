@@ -22,38 +22,12 @@ import javafx.stage.StageStyle;
 
 public class CheckTestControl implements Initializable {
 	@FXML
-	private TableView<Subject> tableView;
-	@FXML
-	private Button Home;
-	@FXML
 	private Button Add;
 	
-	private ObservableList<Subject> list;
+	
 
 	public void initialize(URL location, ResourceBundle resources) {
-
-		TableColumn tc = tableView.getColumns().get(0);
-		tc.setCellValueFactory(new PropertyValueFactory("name"));
-		tc.setStyle("-fx-alignment: CENTER;");
-
-		tc = tableView.getColumns().get(1);
-		tc.setCellValueFactory(new PropertyValueFactory("range"));
-		tc.setStyle("-fx-alignment: CENTER;");
-
-		tc = tableView.getColumns().get(2);
-		tc.setCellValueFactory(new PropertyValueFactory("day"));
-		tc.setStyle("-fx-alignment: CENTER;");
-
-		tableView.setItems(list);
-		// tableView.setOnMouseClicked(event->handleTableViewMouseClicked(event));
-		Home.setOnAction(e -> homeAction(e));
 		Add.setOnAction(e -> AddAction(e));
-	}
-
-	public void homeAction(ActionEvent event) {
-		System.out.println("asdf");
-		//Button Home =(Button) parent.lookup("#Hoom");
-		//Home.setOnAction(e->dialog.close());
 	}
 
 	public void AddAction(ActionEvent event) {
@@ -69,7 +43,6 @@ public class CheckTestControl implements Initializable {
 				TextField txtName = (TextField) parent.lookup("#txtName");
 				TextField txtRange = (TextField) parent.lookup("#txtKorean");
 				TextField txtDay = (TextField) parent.lookup("#txtMath");
-				list.add(new Subject(txtName.getText(), txtRange.getText(), txtDay.getText()));
 				dialog.close();
 			});
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");

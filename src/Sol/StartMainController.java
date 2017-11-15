@@ -10,12 +10,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class SMC implements Initializable {
+public class StartMainController implements Initializable {
 	@FXML
 	private Button Home;
 
@@ -26,8 +23,6 @@ public class SMC implements Initializable {
 	}
 
 	public void HomeAction(ActionEvent event) {
-
-		System.out.println("asdf");
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("Main.fxml"));
 			System.out.println("asdferf");
@@ -39,5 +34,4 @@ public class SMC implements Initializable {
 		}
 
 	}
-
 }
