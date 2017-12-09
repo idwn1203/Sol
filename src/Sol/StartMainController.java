@@ -28,6 +28,7 @@ public class StartMainController implements Initializable {
 			Scene scene =new Scene(main);
 			Stage primaryStage =(Stage)Home.getScene().getWindow();
 			primaryStage.setScene(scene);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

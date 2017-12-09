@@ -4,8 +4,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Schedule {
-	protected SimpleStringProperty name;
-	protected SimpleIntegerProperty day;
+	private SimpleStringProperty name;
+	private SimpleIntegerProperty day;
 
 	public Schedule() {
 		this.name = new SimpleStringProperty();
@@ -15,7 +15,9 @@ public class Schedule {
 	public Schedule(String name,int day) {
 		this.name = new SimpleStringProperty(name);
 		this.day = new SimpleIntegerProperty(day);
-	
+	}
+	public Schedule(String name) {
+		this.name = new SimpleStringProperty(name);
 	}
 
 	public int getDay() {

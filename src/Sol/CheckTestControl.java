@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -27,11 +28,13 @@ public class CheckTestControl implements Initializable {
 	@FXML private TableView<Test> tableView;
 	
 	private ObservableList<Test> list;
-	
+	private Node a;
 @Override
 	public void initialize(URL location, ResourceBundle resources) {
 		list = FXCollections.observableArrayList(
-				new Test("°´Ã¼","¿ÖÁÕ",171120)
+				new Test("°´Ã¼","~24",171120),
+				new Test("ÄÄÇ»ÅÍ±×·¡","¹è¿î´ë±îÁö",171120),
+				new Test("","¿ÖÁÕ",171120)
 		);
 		Add.setOnAction(e -> AddAction(e));
 	
@@ -72,7 +75,6 @@ public class CheckTestControl implements Initializable {
 				));
 				dialog.close();
 			});
-		
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
 			btnFormCancel.setOnAction(e->dialog.close());
 			

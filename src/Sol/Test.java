@@ -6,8 +6,6 @@ import javafx.beans.property.SimpleStringProperty;
 public class Test extends Schedule {
 
 	private SimpleStringProperty range;
-	//private SimpleStringProperty name;
-	//private SimpleIntegerProperty day;
 
 	 public Test(String name,int day) {
 	 super(name,day);

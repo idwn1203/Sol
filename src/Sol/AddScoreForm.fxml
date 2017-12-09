@@ -46,7 +46,7 @@
             <Insets bottom="10" top="20.0" />
          </BorderPane.margin>      
          <children>
-            <Button id="btnFormAdd" text="저장" />
+            <Button id="btnAdd" text="저장" />
             <Button id="btnFormCancel" text="취소" />
          </children>
       </HBox>

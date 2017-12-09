@@ -90,7 +90,7 @@ public class RootController implements Initializable {
 		Stage dialog = new Stage(StageStyle.UTILITY);
 		dialog.initModality(Modality.WINDOW_MODAL);
 		dialog.initOwner(CheckTime.getScene().getWindow());
-		dialog.setTitle("확인");
+		dialog.setTitle("공부시간확인");
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckTime.fxml"));
 
 		Button Home = (Button) parent.lookup("#Home");
@@ -105,14 +105,23 @@ public class RootController implements Initializable {
 
 	public void handleCheckTestAction(ActionEvent event) throws IOException {
 		Stage dialog = new Stage(StageStyle.UTILITY);
+		//다이얼로그 생성
 		dialog.initModality(Modality.WINDOW_MODAL);
+		//윈도우창 모델설정
 		dialog.initOwner(CheckTime.getScene().getWindow());
+		//윈도우창 띄우기
 		dialog.setTitle("확인");
+		//dialog제목
 		Parent parent = FXMLLoader.load(getClass().getResource("CheckTest.fxml"));
+		//fxml로딩
 		Scene scene = new Scene(parent);
+		//새로운 Parent로 Scene 만들기
 		Button Home = (Button) parent.lookup("#Home");
+		//홈버튼  controller와 fxml 연결
 		Home.setOnAction(e -> dialog.close());
-
+		//홈 버튼으로 다이얼로그 닫기 등록
+		
+		
 		dialog.setScene(scene);
 		dialog.setResizable(false);
 		dialog.show();
