@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="264.0" text="Court_Manager" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="264.0" text="Court_Manager" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
          <children>
@@ -28,6 +28,7 @@
                </children>
             </VBox>
             <CheckBox layoutX="141.0" layoutY="100.0" mnemonicParsing="false" text="사용 중 " />
+            <Button fx:id="Home" layoutX="206.0" layoutY="332.0" mnemonicParsing="false" text="이전" />
          </children></AnchorPane>
   </content>
 </TitledPane>

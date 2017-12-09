@@ -11,7 +11,7 @@
       <Button layoutX="53.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="경품" />
       <Button fx:id="Previous" layoutX="292.0" layoutY="38.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="이전" />
       <Button layoutX="53.0" layoutY="251.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="대진표" />
-      <Button layoutX="242.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="코트 현황 " />
-      <Button layoutX="242.0" layoutY="251.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="대회규칙" />
+      <Button fx:id="Court" layoutX="242.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="코트 현황 " />
+      <Button fx:id="Rule" layoutX="242.0" layoutY="251.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="대회규칙" />
    </children>
 </Pane>
