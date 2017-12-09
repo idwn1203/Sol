@@ -32,26 +32,26 @@ public class CheckScoreControl implements Initializable {
 	private ObservableList<Score> list;
 
 	public void initialize(URL location, ResourceBundle resources) {
-//		 list = FXCollections.observableArrayList(
-//		 new Score("객체","왜죵",171120)
-//		 );
-//
-//		 TableColumn tc = tableView.getColumns().get(0);
-//		 tc.setCellValueFactory(new PropertyValueFactory("name"));
-//		 tc.setStyle("-fx-alignment: CENTER;");
-//		
-//		 tc = tableView.getColumns().get(1);
-//		 tc.setCellValueFactory(new PropertyValueFactory("range"));
-//		 tc.setStyle("-fx-alignment: CENTER;");
-//		
-//		 tc = tableView.getColumns().get(2);
-//		 tc.setCellValueFactory(new PropertyValueFactory("day"));
-//		 tc.setStyle("-fx-alignment: CENTER;");
-//
-//		tableView.setItems(list);
-//		// 테이블 뷰 셋팅
-//		btnAdd.setOnAction(e -> btnAddAction(e));
-//		// 버튼 활성화
+		 list = FXCollections.observableArrayList(
+		
+		 );
+
+		 TableColumn tc = tableView.getColumns().get(0);
+		 tc.setCellValueFactory(new PropertyValueFactory("name"));
+		 tc.setStyle("-fx-alignment: CENTER;");
+		
+		 tc = tableView.getColumns().get(1);
+		 tc.setCellValueFactory(new PropertyValueFactory("range"));
+		 tc.setStyle("-fx-alignment: CENTER;");
+		
+		 tc = tableView.getColumns().get(2);
+		 tc.setCellValueFactory(new PropertyValueFactory("day"));
+		 tc.setStyle("-fx-alignment: CENTER;");
+
+		tableView.setItems(list);
+		// 테이블 뷰 셋팅
+		btnAdd.setOnAction(e -> btnAddAction(e));
+		// 버튼 활성화
 	}
 
 	public void btnAddAction(ActionEvent event) {

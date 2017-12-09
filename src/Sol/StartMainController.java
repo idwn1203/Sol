@@ -26,7 +26,7 @@ public class StartMainController implements Initializable {
 
 	public void StudyAction(ActionEvent event) {
 		try {
-			Parent main = FXMLLoader.load(getClass().getResource("Study.fxml"));
+			Parent main = FXMLLoader.load(getClass().getResource("Study_Main.fxml"));
 			Scene scene = new Scene(main);
 			Stage primaryStage = (Stage) Study.getScene().getWindow();
 			primaryStage.setScene(scene);

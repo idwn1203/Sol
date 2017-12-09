@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Labeled;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -25,6 +26,8 @@ public class TMController implements Initializable {
 	private Button Rule;
 	@FXML
 	private Button Court;
+	@FXML
+	private Label num;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -32,6 +35,7 @@ public class TMController implements Initializable {
 		Rule.setOnAction(e -> RuleAction(e));
 		Court.setOnAction(e -> CourtAction(e));
 		Giveaway.setOnAction(e -> GiveawayAction(e));
+		
 	}
 
 	public void GiveawayAction(ActionEvent event) {
@@ -47,34 +51,16 @@ public class TMController implements Initializable {
 			e.printStackTrace();
 		}
 		
-		Label text = new Label();
-		//text.setText("´çÃ·Â÷´Â " );
-		
 		
 		Button Home = (Button) parent.lookup("#Home");
 		Home.setOnAction(e -> dialog.close());
 
-		Button OneMore = (Button) parent.lookup("#OneMore");
-		OneMore.setOnAction(e ->OneMoreAction(e));
-		
-		
 		Scene scene = new Scene(parent);
 		dialog.setScene(scene);
 		dialog.setResizable(false);
 		dialog.show();
 	}
 	
-	public void OneMoreAction(ActionEvent event) {
-		try {
-			Parent main = FXMLLoader.load(getClass().getResource("StartMain.fxml"));
-			Scene scene = new Scene(main);
-			Stage primaryStage = (Stage) Previous.getScene().getWindow();
-			primaryStage.setScene(scene);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 	public void PriviousAction(ActionEvent event) {
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("StartMain.fxml"));

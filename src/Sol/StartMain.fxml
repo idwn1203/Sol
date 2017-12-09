@@ -14,5 +14,10 @@
             <Font size="54.0" />
          </font>
       </Label>
+      <Label layoutX="105.0" layoutY="121.0" prefHeight="15.0" prefWidth="35.0" text="1.0.1">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
