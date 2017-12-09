@@ -1,5 +1,6 @@
 package Sol;
 
+import java.awt.Label;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,7 +17,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class TMController implements Initializable {
-
+	@FXML
+	private Button Giveaway;
 	@FXML
 	private Button Previous;
 	@FXML
@@ -26,12 +28,54 @@ public class TMController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Previous.setOnAction(e -> ScheduleAction(e));
+		Previous.setOnAction(e -> PriviousAction(e));
 		Rule.setOnAction(e -> RuleAction(e));
 		Court.setOnAction(e -> CourtAction(e));
+		Giveaway.setOnAction(e -> GiveawayAction(e));
 	}
 
-	public void ScheduleAction(ActionEvent event) {
+	public void GiveawayAction(ActionEvent event) {
+		Stage dialog = new Stage(StageStyle.UTILITY);
+		dialog.initModality(Modality.WINDOW_MODAL);
+		dialog.initOwner(Rule.getScene().getWindow());
+		dialog.setTitle("경풀추천");
+		Parent parent = null;
+		try {
+			parent = FXMLLoader.load(getClass().getResource("Giveaway.fxml"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Label text = new Label();
+		//text.setText("당첨차는 " );
+		
+		
+		Button Home = (Button) parent.lookup("#Home");
+		Home.setOnAction(e -> dialog.close());
+
+		Button OneMore = (Button) parent.lookup("#OneMore");
+		OneMore.setOnAction(e ->OneMoreAction(e));
+		
+		
+		Scene scene = new Scene(parent);
+		dialog.setScene(scene);
+		dialog.setResizable(false);
+		dialog.show();
+	}
+	
+	public void OneMoreAction(ActionEvent event) {
+		try {
+			Parent main = FXMLLoader.load(getClass().getResource("StartMain.fxml"));
+			Scene scene = new Scene(main);
+			Stage primaryStage = (Stage) Previous.getScene().getWindow();
+			primaryStage.setScene(scene);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void PriviousAction(ActionEvent event) {
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("StartMain.fxml"));
 			Scene scene = new Scene(main);
@@ -77,7 +121,6 @@ public class TMController implements Initializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		Button Home = (Button) parent.lookup("#Home");
 		Home.setOnAction(e -> dialog.close());
 

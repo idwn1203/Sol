@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="64.0" layoutY="53.0" prefHeight="40.0" prefWidth="118.0" text="축하 드립니다" />
+      <Button fx:id="OneMore" layoutX="44.0" layoutY="212.0" mnemonicParsing="false" text="한번더" />
+      <Button fx:id="Home" layoutX="155.0" layoutY="212.0" mnemonicParsing="false" text="이전" />
+   </children>
+</Pane>

@@ -29,7 +29,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
-public class MainController implements Initializable {
+public class StudyController implements Initializable {
 
 	@FXML
 	private Button CheckTime;

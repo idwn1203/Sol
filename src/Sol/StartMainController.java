@@ -14,21 +14,21 @@ import javafx.stage.Stage;
 
 public class StartMainController implements Initializable {
 	@FXML
-	private Button Schedule;
+	private Button Study;
 	@FXML
 	private Button Tennis;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Schedule.setOnAction(e -> ScheduleAction(e));
+		Study.setOnAction(e -> StudyAction(e));
 		Tennis.setOnAction(e -> TennisAction(e));
 	}
 
-	public void ScheduleAction(ActionEvent event) {
+	public void StudyAction(ActionEvent event) {
 		try {
-			Parent main = FXMLLoader.load(getClass().getResource("Main.fxml"));
+			Parent main = FXMLLoader.load(getClass().getResource("Study.fxml"));
 			Scene scene = new Scene(main);
-			Stage primaryStage = (Stage) Schedule.getScene().getWindow();
+			Stage primaryStage = (Stage) Study.getScene().getWindow();
 			primaryStage.setScene(scene);
 
 		} catch (Exception e) {
@@ -40,7 +40,7 @@ public class StartMainController implements Initializable {
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("Tennis_main.fxml"));
 			Scene scene = new Scene(main);
-			Stage primaryStage = (Stage) Schedule.getScene().getWindow();
+			Stage primaryStage = (Stage) Tennis.getScene().getWindow();
 			primaryStage.setScene(scene);
 
 		} catch (Exception e) {

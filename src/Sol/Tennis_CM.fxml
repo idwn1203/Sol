@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="264.0" text="Court_Manager" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-         <children>
-            <CheckBox layoutX="141.0" layoutY="166.0" mnemonicParsing="false" text="사용 중 " />
-            <CheckBox layoutX="141.0" layoutY="132.0" mnemonicParsing="false" text="사용 중 " />
-            <CheckBox layoutX="141.0" layoutY="197.0" mnemonicParsing="false" text="사용 중 " />
-            <CheckBox layoutX="141.0" layoutY="224.0" mnemonicParsing="false" text="사용 중 " />
-            <CheckBox layoutX="141.0" layoutY="253.0" mnemonicParsing="false" text="사용 중 " />
-            <CheckBox layoutX="141.0" layoutY="284.0" mnemonicParsing="false" text="사용 중 " />
-            <CheckBox layoutX="141.0" layoutY="71.0" mnemonicParsing="false" text="사용 중 " />
-            <VBox layoutX="14.0" layoutY="67.0" prefHeight="259.0" prefWidth="100.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="1번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="2번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="3번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="4번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="5번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="6번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="7번 코트 " textAlignment="JUSTIFY" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="105.0" text="8번 코트 " textAlignment="JUSTIFY" />
-               </children>
-            </VBox>
-            <CheckBox layoutX="141.0" layoutY="100.0" mnemonicParsing="false" text="사용 중 " />
-            <Button fx:id="Home" layoutX="206.0" layoutY="332.0" mnemonicParsing="false" text="이전" />
-         </children></AnchorPane>
-  </content>
-</TitledPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="Home" layoutX="264.0" layoutY="317.0" mnemonicParsing="false" text="이전 " />
+      <CheckBox layoutX="229.0" layoutY="120.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="28.0" layoutY="120.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="129.0" layoutY="120.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="238.0" layoutY="238.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="135.0" layoutY="238.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="28.0" layoutY="238.0" mnemonicParsing="false" text="CheckBox" />
+      <Label contentDisplay="CENTER" layoutX="35.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="1번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="139.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="2번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="229.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="3번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="1.0" />
+         </opaqueInsets>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="32.0" layoutY="158.0" prefHeight="51.0" prefWidth="71.0" text="4번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="139.0" layoutY="158.0" prefHeight="51.0" prefWidth="71.0" text="5번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="239.0" layoutY="158.0" prefHeight="51.0" prefWidth="71.0" text="6번 코트" textAlignment="CENTER" textFill="#115744" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

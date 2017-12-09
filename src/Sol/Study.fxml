@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.MainController">
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.StudyController">
 	<children>
 		<TitledPane animated="false" text="Sol_Ver.1.0.1" />
       <ImageView fitHeight="152.0" fitWidth="200.0">
