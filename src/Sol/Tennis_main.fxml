@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="53.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="경품" />
+      <Button layoutX="292.0" layoutY="38.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="이전" />
+      <Button layoutX="53.0" layoutY="251.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="대진표" />
+      <Button layoutX="242.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="코트 현황 " />
+      <Button layoutX="242.0" layoutY="251.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="141.0" text="대회규칙" />
+   </children>
+</Pane>
