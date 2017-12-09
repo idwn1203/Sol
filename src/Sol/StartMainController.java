@@ -14,21 +14,35 @@ import javafx.stage.Stage;
 
 public class StartMainController implements Initializable {
 	@FXML
-	private Button Home;
+	private Button Schedule;
+	@FXML
+	private Button Tennis;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Home.setOnAction(e -> HomeAction(e));
-
+		Schedule.setOnAction(e -> ScheduleAction(e));
+		Tennis.setOnAction(e -> TennisAction(e));
 	}
 
-	public void HomeAction(ActionEvent event) {
+	public void ScheduleAction(ActionEvent event) {
 		try {
 			Parent main = FXMLLoader.load(getClass().getResource("Main.fxml"));
-			Scene scene =new Scene(main);
-			Stage primaryStage =(Stage)Home.getScene().getWindow();
+			Scene scene = new Scene(main);
+			Stage primaryStage = (Stage) Schedule.getScene().getWindow();
 			primaryStage.setScene(scene);
-			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void TennisAction(ActionEvent event) {
+		try {
+			Parent main = FXMLLoader.load(getClass().getResource("Tennis_main.fxml"));
+			Scene scene = new Scene(main);
+			Stage primaryStage = (Stage) Schedule.getScene().getWindow();
+			primaryStage.setScene(scene);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

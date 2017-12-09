@@ -6,7 +6,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="193.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.StartMainController">
    <children>
-      <Button fx:id="Home" layoutX="107.0" layoutY="74.0" mnemonicParsing="false" text="Schedule" />
-      <Button fx:id="Home1" layoutX="116.0" layoutY="119.0" mnemonicParsing="false" text="Game" />
+      <Button fx:id="Schedule" layoutX="107.0" layoutY="74.0" mnemonicParsing="false" text="Schedule" />
+      <Button fx:id="Tennis" layoutX="116.0" layoutY="119.0" mnemonicParsing="false" text="Tennis" />
    </children>
 </Pane>
