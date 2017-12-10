@@ -17,16 +17,12 @@
    <center>
 		<TableView fx:id="tableView" BorderPane.alignment="CENTER">
 			<columns>
-				<TableColumn prefWidth="52.0" resizable="false" text="과목" />
-            <TableColumn prefWidth="54.0" resizable="false" text="학점" />
-				<TableColumn prefWidth="54.0" resizable="false" text="성적" />
-				<TableColumn prefWidth="69.0" resizable="false" text="취득학점" />
-            <TableColumn prefWidth="104.0" resizable="false" text="학기">
-               <columns>
-                  <TableColumn prefWidth="104.0" resizable="false" text="년도" />
-                  <TableColumn prefWidth="104.0" resizable="false" text="학기" />
-               </columns>
-            </TableColumn>
+				<TableColumn prefWidth="167.0" resizable="false" text="과목" />
+            <TableColumn minWidth="0.0" prefWidth="62.0" resizable="false" text="학점" />
+				<TableColumn prefWidth="62.0" resizable="false" text="성적" />
+				<TableColumn prefWidth="62.0" resizable="false" text="취득학점" />
+            <TableColumn prefWidth="62.0" resizable="false" text="학기" />
+            <TableColumn prefWidth="62.0" resizable="false" text="년도" />
 			</columns>
 		</TableView>
    </center>

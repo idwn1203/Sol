@@ -32,26 +32,40 @@ public class CheckScoreControl implements Initializable {
 	private ObservableList<Score> list;
 
 	public void initialize(URL location, ResourceBundle resources) {
-		 list = FXCollections.observableArrayList(
-		
-		 );
+		list = FXCollections.observableArrayList(
+				new Score("프로그래밈 기초", 3, 3.5, 3, 2017, 1),
+				new Score("마이크로프로세서2", 3, 3, 3, 2017, 1));
 
-		 TableColumn tc = tableView.getColumns().get(0);
-		 tc.setCellValueFactory(new PropertyValueFactory("name"));
-		 tc.setStyle("-fx-alignment: CENTER;");
-		
-		 tc = tableView.getColumns().get(1);
-		 tc.setCellValueFactory(new PropertyValueFactory("range"));
-		 tc.setStyle("-fx-alignment: CENTER;");
-		
-		 tc = tableView.getColumns().get(2);
-		 tc.setCellValueFactory(new PropertyValueFactory("day"));
-		 tc.setStyle("-fx-alignment: CENTER;");
+		TableColumn tc = tableView.getColumns().get(0);
+		tc.setCellValueFactory(new PropertyValueFactory("name"));
+		tc.setStyle("-fx-alignment: CENTER;");
+
+		tc = tableView.getColumns().get(1);
+		tc.setCellValueFactory(new PropertyValueFactory("AssignScore"));
+		tc.setStyle("-fx-alignment: CENTER;");
+
+		tc = tableView.getColumns().get(2);
+		tc.setCellValueFactory(new PropertyValueFactory("GetScore"));
+		tc.setStyle("-fx-alignment: CENTER;");
+
+		tc = tableView.getColumns().get(3);
+		tc.setCellValueFactory(new PropertyValueFactory("SubjectGetScore"));
+		tc.setStyle("-fx-alignment: CENTER;");
+
+		tc = tableView.getColumns().get(4);
+		tc.setCellValueFactory(new PropertyValueFactory("Year"));
+		tc.setStyle("-fx-alignment: CENTER;");
+
+		tc = tableView.getColumns().get(5);
+		tc.setCellValueFactory(new PropertyValueFactory("Grade"));
+		tc.setStyle("-fx-alignment: CENTER;");
 
 		tableView.setItems(list);
 		// 테이블 뷰 셋팅
 		btnAdd.setOnAction(e -> btnAddAction(e));
 		// 버튼 활성화
+
+		btnScore.setOnAction(e -> btnScoreAction(e));
 	}
 
 	public void btnAddAction(ActionEvent event) {
@@ -62,16 +76,18 @@ public class CheckScoreControl implements Initializable {
 			dialog.initOwner(btnAdd.getScene().getWindow());
 			dialog.setTitle("추가");
 			Parent parent = FXMLLoader.load(getClass().getResource("AddScoreForm.fxml"));
-			Button btnFormAdd = (Button) parent.lookup("#btnAdd");
+			Button btnFormAdd = (Button) parent.lookup("#btnFormAdd");
 			btnFormAdd.setOnAction(e -> {
 				TextField txtName = (TextField) parent.lookup("#txtName");
-				TextField txtRange = (TextField) parent.lookup("#txtRange");
-				TextField txtDay = (TextField) parent.lookup("#txtDay");
-				// list.add(new Test(
-				// txtName.getText(),
-				// txtRange.getText(),
-				// Integer.parseInt(txtDay.getText())
-				// ));
+				TextField txtAssignScore = (TextField) parent.lookup("#txtAssignScore");
+				TextField txtGetScore = (TextField) parent.lookup("#txtGetScore");
+				TextField txtSubjectGetScore = (TextField) parent.lookup("#txtSubjectGetScore");
+				TextField txtYear = (TextField) parent.lookup("#txtYear");
+				TextField txtGrade = (TextField) parent.lookup("#txtGrade");
+
+				list.add(new Score(txtName.getText(), Integer.parseInt(txtAssignScore.getText()),
+						Integer.parseInt(txtGetScore.getText()), Integer.parseInt(txtSubjectGetScore.getText()),
+						Integer.parseInt(txtYear.getText()), Integer.parseInt(txtGrade.getText())));
 				dialog.close();
 			});
 

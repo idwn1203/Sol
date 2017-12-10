@@ -28,13 +28,12 @@ public class CheckTestControl implements Initializable {
 	@FXML private TableView<Test> tableView;
 	
 	private ObservableList<Test> list;
-	private Node a;
 @Override
 	public void initialize(URL location, ResourceBundle resources) {
 		list = FXCollections.observableArrayList(
-				new Test("객체","~24",171120),
-				new Test("컴퓨터그래","배운대까지",171120),
-				new Test("","왜죵",171120)
+				new Test("객체","~24",171219),
+				new Test("컴퓨터그래","배운대까지",171220),
+				new Test("네트워크","23~26",171212)
 		);
 		Add.setOnAction(e -> AddAction(e));
 	

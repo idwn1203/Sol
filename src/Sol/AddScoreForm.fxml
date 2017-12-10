@@ -15,15 +15,15 @@
             <Label prefWidth="50" text="과목명" />
             <Label prefWidth="50" text="학점" GridPane.rowIndex="1" />
             <Label prefWidth="50" text="성적" GridPane.rowIndex="2" />
-            <TextField id="txtName" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField id="txtKorean" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField id="txtMath" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label layoutX="10.0" layoutY="58.0" prefWidth="50" text="취득학점" GridPane.rowIndex="3" />
             <Label layoutX="10.0" layoutY="98.0" prefWidth="50" text="년도" GridPane.rowIndex="4" />
             <Label layoutX="10.0" layoutY="18.0" prefWidth="50" text="학기" GridPane.rowIndex="5" />
-            <TextField id="txtMath" layoutX="70.0" layoutY="196.0" prefWidth="100" GridPane.columnIndex="1" />
-            <TextField id="txtName" layoutX="70.0" layoutY="130.0" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField id="txtKorean" layoutX="70.0" layoutY="163.0" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="txtName" prefWidth="100" GridPane.columnIndex="1" />
+            <TextField id="txtAssignScore" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="txtGetScore" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="txtSubjectGetScore" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField id="txtYear" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField id="txtGrade" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
          <columnConstraints>
             <ColumnConstraints />
@@ -46,7 +46,7 @@
             <Insets bottom="10" top="20.0" />
          </BorderPane.margin>      
          <children>
-            <Button id="btnAdd" text="저장" />
+            <Button id="btnFormAdd" text="저장" />
             <Button id="btnFormCancel" text="취소" />
          </children>
       </HBox>

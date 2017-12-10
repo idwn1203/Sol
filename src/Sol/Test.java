@@ -7,10 +7,6 @@ public class Test extends Schedule {
 
 	private SimpleStringProperty range;
 
-	 public Test(String name,int day) {
-	 super(name,day);
-	 this.range= new SimpleStringProperty();
-	 }
 	
 	 public Test(String name,String range,int day) {
 	 super(name,day);
