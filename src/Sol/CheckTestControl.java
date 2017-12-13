@@ -76,7 +76,6 @@ public class CheckTestControl implements Initializable {
 			});
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
 			btnFormCancel.setOnAction(e->dialog.close());
-			
 			Scene scene = new Scene(parent);
 			dialog.setScene(scene);
 			dialog.setResizable(false);

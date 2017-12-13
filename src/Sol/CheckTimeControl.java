@@ -2,9 +2,11 @@ package Sol;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
@@ -35,11 +38,13 @@ public class CheckTimeControl implements Initializable {
 	private Button Stop;
 	@FXML
 	private TableView<Time> tableView;
-
-	private ObservableList<Time> list;
+	@FXML
 	private ProgressIndicator progressIndicator;
-	int i=0;
-	
+	@FXML
+	private ProgressBar progressBar;
+	private ObservableList<Time> list;
+	private Task<Integer> task;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -54,7 +59,6 @@ public class CheckTimeControl implements Initializable {
 		tc.setCellValueFactory(new PropertyValueFactory("goal"));
 		tc.setStyle("-fx-alignment: CENTER;");
 
-		
 		tableView.setItems(list);
 		Start.setOnAction(e -> StartAct(e));
 		Pause.setOnAction(e -> PauseAct(e));
@@ -70,15 +74,12 @@ public class CheckTimeControl implements Initializable {
 			dialog.setTitle("Ãß°¡");
 
 			Parent parent = FXMLLoader.load(getClass().getResource("AddSubject.fxml"));
-			Button btnFormAdd =(Button) parent.lookup("#btnFormAdd");
+			Button btnFormAdd = (Button) parent.lookup("#btnFormAdd");
 			btnFormAdd.setOnAction(e -> {
 				TextField txtName = (TextField) parent.lookup("#txtName");
 				TextField txtGoal = (TextField) parent.lookup("#txtGoal");
-				list.add(new Time(
-						txtName.getText(),
-						Integer.parseInt(txtGoal.getText())
-				));
-				
+
+				list.add(new Time(txtName.getText(), Integer.parseInt(txtGoal.getText())));
 				dialog.close();
 			});
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
@@ -91,16 +92,27 @@ public class CheckTimeControl implements Initializable {
 		}
 	}
 
-	
 	public void StartAct(ActionEvent event) {
-		
+
+		int j = 0;
+		for (int i = 0; i < list.size(); i++) {
+			j = list.get(i).getGoal();
+		}
+
+		long start = System.currentTimeMillis();
+		long end = System.currentTimeMillis();
+		int startstudy = ((int) (start-end));
+		System.out.println(j);
+		System.out.println(startstudy);
+
 	}
 
 	public void PauseAct(ActionEvent event) {
-		
+
 	}
+
 	public void StopAct(ActionEvent event) {
-		progressIndicator.setProgress(1.0);	
+		task.cancel();
 	}
 
 }

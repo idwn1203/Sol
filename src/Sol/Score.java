@@ -33,10 +33,9 @@ public class Score extends Schedule {
 	}
 
 	public double getGetScore() {
-		return AssignScore.get();
+		return GetScore.get();
 
 	}
-
 	public void setSubjectGetScore(int SubjectGetScore) {
 		this.SubjectGetScore.set(SubjectGetScore);
 	}

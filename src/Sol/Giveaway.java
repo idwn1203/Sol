@@ -21,12 +21,10 @@ public class Giveaway implements Initializable{
 
 		OneMore.setOnAction(e -> OneMoreAction(e));
 	}
-	
 
 	public void OneMoreAction(ActionEvent event) {
 		int number;
 		number = (int)(Math.random()*40);
 		num.setText(number+"¹ø");
-		
 	}
 }

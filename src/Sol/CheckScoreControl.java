@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -26,15 +27,20 @@ public class CheckScoreControl implements Initializable {
 	private Button btnAdd;
 	@FXML
 	private Button btnScore;
+//	@FXML
+//	private double Avg;
+	
 	@FXML
 	private TableView<Score> tableView;
 
 	private ObservableList<Score> list;
-
+	private double avg;
+	
 	public void initialize(URL location, ResourceBundle resources) {
 		list = FXCollections.observableArrayList(
 				new Score("프로그래밈 기초", 3, 3.5, 3, 2017, 1),
-				new Score("마이크로프로세서2", 3, 3, 3, 2017, 1));
+				new Score("객체", 3, 4.5, 6, 2017, 1),
+				new Score("마이크로프로세서2", 3, 4, 5, 2017, 1));
 
 		TableColumn tc = tableView.getColumns().get(0);
 		tc.setCellValueFactory(new PropertyValueFactory("name"));
@@ -64,8 +70,8 @@ public class CheckScoreControl implements Initializable {
 		// 테이블 뷰 셋팅
 		btnAdd.setOnAction(e -> btnAddAction(e));
 		// 버튼 활성화
-
 		btnScore.setOnAction(e -> btnScoreAction(e));
+		
 	}
 
 	public void btnAddAction(ActionEvent event) {
@@ -84,7 +90,6 @@ public class CheckScoreControl implements Initializable {
 				TextField txtSubjectGetScore = (TextField) parent.lookup("#txtSubjectGetScore");
 				TextField txtYear = (TextField) parent.lookup("#txtYear");
 				TextField txtGrade = (TextField) parent.lookup("#txtGrade");
-
 				list.add(new Score(txtName.getText(), Integer.parseInt(txtAssignScore.getText()),
 						Integer.parseInt(txtGetScore.getText()), Integer.parseInt(txtSubjectGetScore.getText()),
 						Integer.parseInt(txtYear.getText()), Integer.parseInt(txtGrade.getText())));
@@ -102,8 +107,32 @@ public class CheckScoreControl implements Initializable {
 		}
 	}
 
-	public void btnScoreAction(ActionEvent event) {
-
+	public void btnScoreAction(ActionEvent event) {		
+		CalcAverage();
+		try {
+			Stage dialog = new Stage(StageStyle.UTILITY);
+			dialog.initModality(Modality.WINDOW_MODAL);
+			dialog.initOwner(btnAdd.getScene().getWindow());
+			dialog.setTitle("추가");
+			Parent parent = FXMLLoader.load(getClass().getResource("AverageScore.fxml"));	
+			Label Avg =(Label)parent.lookup("#Avg");
+			Avg.setText(avg+"");
+			Button Home = (Button) parent.lookup("#Home");
+			Home.setOnAction(e -> dialog.close());
+			Scene scene = new Scene(parent);
+			dialog.setScene(scene);
+			dialog.setResizable(false);
+			dialog.show();
+		} catch (IOException e) {
+		}
 	}
-
+	
+	public void CalcAverage() {
+		avg=0.0;
+		for (int i = 0; i < list.size(); i++) {
+			avg += ((double) list.get(i).getGetScore());
+			System.out.println(avg);
+		}
+		avg=avg/list.size();
+	}
 }
