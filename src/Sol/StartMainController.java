@@ -3,6 +3,7 @@ package Sol;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,11 +18,13 @@ public class StartMainController implements Initializable {
 	private Button Study;
 	@FXML
 	private Button Tennis;
-
+	@FXML
+	private Button Exit;
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		Study.setOnAction(e -> StudyAction(e));
 		Tennis.setOnAction(e -> TennisAction(e));
+		Exit.setOnAction(e -> ExitAction(e));
 	}
 
 	public void StudyAction(ActionEvent event) {
@@ -48,4 +51,8 @@ public class StartMainController implements Initializable {
 		}
 
 	}
+	public void ExitAction(ActionEvent event) {
+		Platform.exit();
+	}
+	
 }

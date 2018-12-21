@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.imageio.IIOException;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -68,15 +70,22 @@ public class CheckScoreControl implements Initializable {
 
 		tableView.setItems(list);
 		// 테이블 뷰 셋팅
-		btnAdd.setOnAction(e -> btnAddAction(e));
+		//btnAdd.setOnAction(e -> btnAddAction(e));
+		btnAdd.setOnAction(e->{
+			try {
+				btnAddAction(e);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
 		// 버튼 활성화
 		btnScore.setOnAction(e -> btnScoreAction(e));
 		
 	}
 
-	public void btnAddAction(ActionEvent event) {
+	public void btnAddAction(ActionEvent event) throws IOException{
 		// 추가 버튼 기능 구현
-		try {
 			Stage dialog = new Stage(StageStyle.UTILITY);
 			dialog.initModality(Modality.WINDOW_MODAL);
 			dialog.initOwner(btnAdd.getScene().getWindow());
@@ -95,7 +104,6 @@ public class CheckScoreControl implements Initializable {
 						Integer.parseInt(txtYear.getText()), Integer.parseInt(txtGrade.getText())));
 				dialog.close();
 			});
-
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
 			btnFormCancel.setOnAction(e -> dialog.close());
 
@@ -103,8 +111,6 @@ public class CheckScoreControl implements Initializable {
 			dialog.setScene(scene);
 			dialog.setResizable(false);
 			dialog.show();
-		} catch (IOException e) {
-		}
 	}
 
 	public void btnScoreAction(ActionEvent event) {		

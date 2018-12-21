@@ -33,8 +33,6 @@ public class CheckTimeControl implements Initializable {
 	@FXML
 	private Button Start;
 	@FXML
-	private Button Pause;
-	@FXML
 	private Button Stop;
 	@FXML
 	private TableView<Time> tableView;
@@ -48,7 +46,7 @@ public class CheckTimeControl implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		list = FXCollections.observableArrayList(new Time("°´Ã¼", 2, 0));
+		list = FXCollections.observableArrayList(new Time("°´Ã¼", 2));
 
 		Add.setOnAction(e -> AddAction(e));
 		TableColumn tc = tableView.getColumns().get(0);
@@ -61,7 +59,6 @@ public class CheckTimeControl implements Initializable {
 
 		tableView.setItems(list);
 		Start.setOnAction(e -> StartAct(e));
-		Pause.setOnAction(e -> PauseAct(e));
 		Stop.setOnAction(e -> StopAct(e));
 
 	}
@@ -84,6 +81,7 @@ public class CheckTimeControl implements Initializable {
 			});
 			Button btnFormCancel = (Button) parent.lookup("#btnFormCancel");
 			btnFormCancel.setOnAction(e -> dialog.close());
+			
 			Scene scene = new Scene(parent);
 			dialog.setScene(scene);
 			dialog.setResizable(false);
@@ -93,23 +91,32 @@ public class CheckTimeControl implements Initializable {
 	}
 
 	public void StartAct(ActionEvent event) {
-
-		int j = 0;
-		for (int i = 0; i < list.size(); i++) {
-			j = list.get(i).getGoal();
-		}
-
-		long start = System.currentTimeMillis();
-		long end = System.currentTimeMillis();
-		int startstudy = ((int) (start-end));
-		System.out.println(j);
-		System.out.println(startstudy);
-
+		task = new Task<Integer>() {
+			@Override
+			protected Integer call() throws Exception {
+				int result = 0;
+				for(int i=0; i<=100; i++) {
+					if(isCancelled()) { break; }
+					result += i;
+					updateProgress(i, 100);
+					updateMessage(String.valueOf(i));
+					try {Thread.sleep(100); } catch(InterruptedException e) {
+						if(isCancelled()) { break; }
+					}
+				}
+				return result;
+			}
+			
+		
+		};
+		
+		progressBar.progressProperty().bind(task.progressProperty());
+		Thread thread = new Thread(task);
+		thread.setDaemon(true);
+		thread.start();
 	}
 
-	public void PauseAct(ActionEvent event) {
-
-	}
+	
 
 	public void StopAct(ActionEvent event) {
 		task.cancel();

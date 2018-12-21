@@ -11,12 +11,12 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="Home" layoutX="264.0" layoutY="317.0" mnemonicParsing="false" text="이전 " />
-      <CheckBox layoutX="229.0" layoutY="120.0" mnemonicParsing="false" text="CheckBox" />
-      <CheckBox layoutX="28.0" layoutY="120.0" mnemonicParsing="false" text="CheckBox" />
-      <CheckBox layoutX="129.0" layoutY="120.0" mnemonicParsing="false" text="CheckBox" />
-      <CheckBox layoutX="238.0" layoutY="238.0" mnemonicParsing="false" text="CheckBox" />
-      <CheckBox layoutX="135.0" layoutY="238.0" mnemonicParsing="false" text="CheckBox" />
-      <CheckBox layoutX="28.0" layoutY="238.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="229.0" layoutY="120.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="28.0" layoutY="120.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="129.0" layoutY="120.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="238.0" layoutY="238.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="135.0" layoutY="238.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="28.0" layoutY="238.0" mnemonicParsing="false" text="사용중" />
       <Label contentDisplay="CENTER" layoutX="35.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="1번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="16.0" />

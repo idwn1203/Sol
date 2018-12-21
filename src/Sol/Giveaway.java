@@ -18,7 +18,6 @@ public class Giveaway implements Initializable{
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
 		OneMore.setOnAction(e -> OneMoreAction(e));
 	}
 

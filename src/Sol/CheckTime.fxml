@@ -25,9 +25,8 @@
       <Pane prefHeight="326.0" prefWidth="113.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="Start" layoutX="44.0" layoutY="152.0" text="시작" />
-            <Button fx:id="Pause" layoutX="44.0" layoutY="195.0" text="휴식" />
             <Button fx:id="Stop" layoutX="44.0" layoutY="239.0" text="중지" />
-            <ProgressBar fx:id="progressBar" prefHeight="117.0" prefWidth="127.0" progress="0.0" />
+            <ProgressBar fx:id="progressBar" prefHeight="117.0" prefWidth="110.0" progress="0.0" />
          </children>
       </Pane>
    </right>

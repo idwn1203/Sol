@@ -8,13 +8,9 @@ public class Time extends Schedule {
 
 	public Time(String name,int goal) {
 	super(name);
-	this.goal = new SimpleIntegerProperty();
+	this.goal = new SimpleIntegerProperty(goal);
 	}
-	
-	public Time(String name,int goal,int day) {
-		super(name);
-		this.goal = new SimpleIntegerProperty(goal);
-		}
+
 	public int getGoal() {
 		return goal.get();
 	}
