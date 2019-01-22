@@ -132,7 +132,13 @@ try {
 	e.printStackTrace();
 }
 
-
+int a =5;
+int b=1;
+int c;
+for(a=5;a>0;a--) {
+	b=b*a;
+	System.out.println(b);
+}
 /*
  * 특정단어 삽입 축약어 추출 프로그램 
  * */
