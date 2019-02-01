@@ -5,8 +5,12 @@
 <?import javafx.scene.control.*?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.RootController">
 =======
+=======
+
+>>>>>>> Dev_2
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.CheckScoreControl">
 >>>>>>> Dev_2
 	<bottom>
