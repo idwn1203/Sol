@@ -4,24 +4,34 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
+<<<<<<< HEAD
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.RootController">
+=======
+<BorderPane prefHeight="361.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.CheckTimeControl">
+>>>>>>> Dev_2
 	<bottom>
-		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
+		<HBox alignment="CENTER" prefHeight="35.0" prefWidth="357.0" spacing="20">
 			<children>
-            <Button fx:id="btnAdd2" text="홈" />
-				<Button fx:id="btnAdd" text="시작" />
-            <Button fx:id="btnAdd1" layoutX="141.0" layoutY="24.0" text="휴식" />
-            <Button fx:id="btnAdd11" layoutX="171.0" layoutY="24.0" text="완료" />
+            <Button fx:id="Add" layoutX="111.0" layoutY="24.0" text="추가" />
+            <Button fx:id="Home" layoutX="201.0" layoutY="24.0" text="완료" />
 			</children>
 		</HBox>
 	</bottom>
    <center>
-		<TableView fx:id="tableView" BorderPane.alignment="CENTER">
+		<TableView fx:id="tableView" prefHeight="326.0" prefWidth="182.0" BorderPane.alignment="CENTER">
 			<columns>
-				<TableColumn prefWidth="79.0" resizable="false" text="과목" />
-				<TableColumn prefWidth="122.0" resizable="false" text="목표" />
-				<TableColumn prefWidth="99.0" resizable="false" text="현재(%)" />
+				<TableColumn prefWidth="90.0" resizable="false" text="과목" />
+				<TableColumn prefWidth="103.0" resizable="false" text="목표시간(hour)" />
 			</columns>
 		</TableView>
    </center>
+   <right>
+      <Pane prefHeight="326.0" prefWidth="113.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Start" layoutX="44.0" layoutY="152.0" text="시작" />
+            <Button fx:id="Stop" layoutX="44.0" layoutY="239.0" text="중지" />
+            <ProgressBar fx:id="progressBar" prefHeight="117.0" prefWidth="110.0" progress="0.0" />
+         </children>
+      </Pane>
+   </right>
 </BorderPane>

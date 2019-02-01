@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="Home" layoutX="264.0" layoutY="317.0" mnemonicParsing="false" text="이전 " />
+      <CheckBox layoutX="229.0" layoutY="120.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="28.0" layoutY="120.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="129.0" layoutY="120.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="238.0" layoutY="238.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="135.0" layoutY="238.0" mnemonicParsing="false" text="사용중" />
+      <CheckBox layoutX="28.0" layoutY="238.0" mnemonicParsing="false" text="사용중" />
+      <Label contentDisplay="CENTER" layoutX="35.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="1번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="139.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="2번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="229.0" layoutY="45.0" prefHeight="51.0" prefWidth="71.0" text="3번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="1.0" />
+         </opaqueInsets>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="32.0" layoutY="158.0" prefHeight="51.0" prefWidth="71.0" text="4번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="139.0" layoutY="158.0" prefHeight="51.0" prefWidth="71.0" text="5번 코트" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="239.0" layoutY="158.0" prefHeight="51.0" prefWidth="71.0" text="6번 코트" textAlignment="CENTER" textFill="#115744" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

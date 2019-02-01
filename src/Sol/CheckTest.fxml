@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
+<<<<<<< HEAD
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.RootController">
 	<children>
 		<center>
@@ -25,4 +26,24 @@
 			</HBox>
 		</bottom>
 	</children>
+=======
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.CheckTestControl">
+	<center>
+		<TableView fx:id="tableView">
+			<columns>
+				<TableColumn prefWidth="100" resizable="false" text="과목" />
+				<TableColumn prefWidth="100" resizable="false" text="시험범위" />
+				<TableColumn prefWidth="100" resizable="false" text="시험날짜" />
+			</columns>
+		</TableView>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="50.0" spacing="20">
+			<children>
+				<Button fx:id="Add" text="추가" />
+            <Button fx:id="Home" layoutX="141.0" layoutY="24.0" text="완료" />
+			</children>
+		</HBox>
+	</bottom>
+>>>>>>> Dev_2
 </BorderPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="26.0" layoutY="22.0" prefHeight="55.0" prefWidth="205.0" text="평점은?" textFill="#3f3e40" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Button fx:id="Home" layoutX="211.0" layoutY="234.0" mnemonicParsing="false" text="이전" />
+      <Label fx:id="Avg" alignment="TOP_CENTER" layoutX="32.0" layoutY="82.0" prefHeight="108.0" prefWidth="194.0" text="">
+         <font>
+            <Font size="76.0" />
+         </font></Label>
+   </children>
+</Pane>

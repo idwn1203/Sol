@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sol.StudyController">
+	<children>
+		<Pane prefHeight="369.0" prefWidth="478.0">
+			<children>
+            <ImageView fitHeight="369.0" fitWidth="478.0">
+               <image>
+                  <Image url="@Study_Main.PNG" />
+               </image>
+            </ImageView>
+				<Button fx:id="CheckTest" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="108.0" text="시험일정확인" />
+				<Button fx:id="CheckScore" layoutX="131.0" layoutY="303.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="108.0" text="성적확인" />
+            <Button fx:id="Home" layoutX="392.0" layoutY="14.0" mnemonicParsing="false" text="Home" />
+      				<Button fx:id="CheckTime" layoutX="14.0" layoutY="242.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="108.0" text="공부시간확인" />
+			</children>
+		</Pane>
+	</children>
+</VBox>

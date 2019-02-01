@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="36.0" layoutY="43.0" prefHeight="59.0" prefWidth="176.0" text="1)  4게임 -타이브레이크 " />
+      <Button fx:id="Home" layoutX="203.0" layoutY="233.0" mnemonicParsing="false" text="이전" />
+      <Label layoutX="36.0" layoutY="94.0" prefHeight="59.0" prefWidth="176.0" text="2)  노에드 방식 " />
+      <Label layoutX="36.0" layoutY="136.0" prefHeight="59.0" prefWidth="176.0" text="3)  복식 2팀 단식 1팀 " />
+      <Label layoutX="36.0" layoutY="185.0" prefHeight="59.0" prefWidth="176.0" text="4) 이외에는 표준 규칙올 따름 " />
+   </children>
+</Pane>
