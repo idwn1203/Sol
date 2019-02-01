@@ -1,4 +1,4 @@
-package Sol;
+/*package Sol;
 
 import java.awt.Toolkit;
 
@@ -14,6 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class AppMain extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
@@ -28,5 +29,5 @@ public class AppMain extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-
 }
+*/
